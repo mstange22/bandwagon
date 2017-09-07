@@ -99,7 +99,9 @@ function writeButtons() {
         newBtn.addClass("button-primary band-btn");
         newBtn.html(bands[i].name);
 
-        $("#nav-container").append(newBtn);
+        $("#nav-container").append("<li class=\"btn-container\"><button data-index=\"" + i +
+            "\" class=\"button-primary band-btn\">" + bands[i].name +
+            "</button></li>");
     }
 }
 
@@ -112,6 +114,11 @@ function playTrack(index) {
 
         $("#audioSource").attr("src", currentBand.tracks[index].stream_url + "?client_id=" + soundCloudID);
 
+
+    // handle spaces
+    if(bandName.includes(" ")) {
+        bandNameForSearch = bandName.replace(/ /g, "+");
+    }
         var audioController = document.querySelector("#audioController");
 
         audioController.load();
