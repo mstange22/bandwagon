@@ -244,7 +244,7 @@ function displayFact() {
     }
 
     // strip wiki pronunciation container
-    currentBand.facts[factIndex] = currentBand.facts[factIndex].replace(" (; ", " ( ");
+    currentBand.facts[factIndex] = currentBand.facts[factIndex].replace(" (; ", " (");
 
     $("#fun-facts").append("<p>" + currentBand.facts[factIndex] + "</p>");
 }
