@@ -266,6 +266,12 @@ a, a:visited {
 	width: 100px;
 }
 
+.button-primary.album-button.play-track {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 95%;
+}
+
 #cancel {
 	display: block;
 	clear: both;
